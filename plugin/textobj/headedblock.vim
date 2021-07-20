@@ -6,20 +6,20 @@ if exists(':NeoBundleDepends') == 2
     NeoBundleDepends 'kana/vim-textobj-user'
 endif
 
-if !exists('g:a_headed_block_key')
-    let g:a_headed_block_key = 'ak'
+if !exists('g:a_headed_block_map')
+    let g:a_headed_block_map = 'ak'
 endif
 
-if !exists('g:inner_headed_block_key')
-    let g:inner_headed_block_key = 'ik'
+if !exists('g:inner_headed_block_map')
+    let g:inner_headed_block_map = 'ik'
 endif
 
 call textobj#user#plugin('headedblock', {
     \   '-': {
     \     'select-a-function': 'textobj#headedblock#select_a',
-    \     'select-a': g:a_headed_block_key,
+    \     'select-a': g:a_headed_block_map,
     \     'select-i-function': 'textobj#headedblock#select_i',
-    \     'select-i': g:inner_headed_block_key,
+    \     'select-i': g:inner_headed_block_map,
     \   },
     \ })
 
